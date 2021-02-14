@@ -1,0 +1,31 @@
+From 526860ca478615cd8dda8ef1f159d404f1f00bdf Mon Sep 17 00:00:00 2001
+From: cjh1249131356 <cjh1249131356@gmail.com>
+Date: Sun, 21 Feb 2021 12:36:55 +0800
+Subject: [PATCH] SystemUI: Hardcode heads up padding left
+
+---
+ .../systemui/statusbar/HeadsUpStatusBarView.java      | 11 +----------
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/HeadsUpStatusBarView.java b/packages/SystemUI/src/com/android/systemui/statusbar/HeadsUpStatusBarView.java
+index ca9695adb8b0..6da659b63233 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/HeadsUpStatusBarView.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/HeadsUpStatusBarView.java
+@@ -79,16 +79,7 @@ public HeadsUpStatusBarView(Context context, AttributeSet attrs, int defStyleAtt
+             int defStyleRes) {
+         super(context, attrs, defStyleAttr, defStyleRes);
+         Resources res = getResources();
+-        int headsUpStartPadding = getResources().getDimensionPixelSize(R.dimen.heads_up_status_bar_padding_start);
+-        if (headsUpStartPadding > 0) {
+-            mAbsoluteStartPadding = headsUpStartPadding
+-                + res.getDimensionPixelSize(
+-                        com.android.internal.R.dimen.notification_content_margin_start);
+-        } else {
+-            mAbsoluteStartPadding = res.getDimensionPixelSize(R.dimen.notification_side_paddings)
+-                + res.getDimensionPixelSize(
+-                        com.android.internal.R.dimen.notification_content_margin_start);
+-        }
++        mAbsoluteStartPadding = res.getDimensionPixelSize(R.dimen.heads_up_status_bar_padding_start);
+         mEndMargin = res.getDimensionPixelSize(
+                 com.android.internal.R.dimen.notification_content_margin_end);
+         setPaddingRelative(mAbsoluteStartPadding, 0, mEndMargin, 0);
