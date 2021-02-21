@@ -9,4 +9,7 @@ git am $CURRENT_DIR/padding.patch
 git am $CURRENT_DIR/headsup.patch
 
 cd $ROOTDIR
+bash external/motorola/faceunlock/regenerate/regenerate.sh
+
+cd $ROOTDIR
 echo "Done"
