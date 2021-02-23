@@ -11,5 +11,8 @@ git am $CURRENT_DIR/headsup.patch
 cd $ROOTDIR
 bash external/motorola/faceunlock/regenerate/regenerate.sh
 
+cd $ROOTDIR/packages/apps/ConfigCenter
+git am $CURRENT_DIR/lol.patch
+
 cd $ROOTDIR
 echo "Done"

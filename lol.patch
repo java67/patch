@@ -1,0 +1,71 @@
+From e0eb9f34af5768af9def544721aece4243cd7597 Mon Sep 17 00:00:00 2001
+From: cjh1249131356 <cjh1249131356@gmail.com>
+Date: Sun, 21 Feb 2021 18:41:10 +0800
+Subject: [PATCH] ConfigCenter: Add Support For OnePlus 8/8 Pro/8T
+
+---
+ res/values/maintainers_strings.xml |  9 +++++++++
+ res/xml/device_maintainers.xml     | 30 ++++++++++++++++++++++++++++++
+ 2 files changed, 39 insertions(+)
+
+diff --git a/res/values/maintainers_strings.xml b/res/values/maintainers_strings.xml
+index 6aee930..c2ee4b8 100644
+--- a/res/values/maintainers_strings.xml
++++ b/res/values/maintainers_strings.xml
+@@ -76,6 +76,15 @@
+     <string name="device_hotdog" translatable="false">OnePlus 7T Pro</string>
+     <string name="device_hotdog_summary" translatable="false">hotdog\nAnushek Prasal (SKULSHADY)</string>
+ 
++    <string name="device_instantnoodle" translatable="false">OnePlus 8</string>
++    <string name="device_instantnoodle_summary" translatable="false">instantnoodle\nChris Chen (cjh1249131356)</string>
++
++    <string name="device_instantnoodlep" translatable="false">OnePlus 8 Pro</string>
++    <string name="device_instantnoodlep_summary" translatable="false">instantnoodlep\nChris Chen (cjh1249131356)</string>
++
++    <string name="device_kebab" translatable="false">OnePlus 8T</string>
++    <string name="device_kebab_summary" translatable="false">kebab\nChris Chen (cjh1249131356)</string>
++
+     <string name="device_taimen" translatable="false">Google Pixel 2 XL</string>
+     <string name="device_taimen_summary" translatable="false">taimen\nSteve Provancal (slothdabski)</string>
+ 
+diff --git a/res/xml/device_maintainers.xml b/res/xml/device_maintainers.xml
+index 3be1f65..1646d4b 100644
+--- a/res/xml/device_maintainers.xml
++++ b/res/xml/device_maintainers.xml
+@@ -146,6 +146,36 @@
+                 android:action="android.intent.action.VIEW"
+                 android:data="https://t.me/SKULSHADY" />
+         </Preference>
++
++        <Preference
++            android:id="@+id/device_instantnoodle"
++            android:icon="@drawable/havoc_device"
++            android:summary="@string/device_instantnoodle_summary"
++            android:title="@string/device_instantnoodle">
++            <intent
++                android:action="android.intent.action.VIEW"
++                android:data="https://t.me/cjh1249131356" />
++        </Preference>
++
++        <Preference
++            android:id="@+id/device_instantnoodlep"
++            android:icon="@drawable/havoc_device"
++            android:summary="@string/device_instantnoodlep_summary"
++            android:title="@string/device_instantnoodlep">
++            <intent
++                android:action="android.intent.action.VIEW"
++                android:data="https://t.me/cjh1249131356" />
++        </Preference>
++
++        <Preference
++            android:id="@+id/device_kebab"
++            android:icon="@drawable/havoc_device"
++            android:summary="@string/device_kebab_summary"
++            android:title="@string/device_kebab">
++            <intent
++                android:action="android.intent.action.VIEW"
++                android:data="https://t.me/cjh1249131356" />
++        </Preference>
+     </PreferenceCategory>
+ 
+     <PreferenceCategory
